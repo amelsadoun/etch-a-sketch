@@ -61,6 +61,10 @@ lighting=false;
 
 upBtn.addEventListener('click', function(){
   if (n<90){
+    COULEUR=tempColor;
+    shading=false;
+    lighting=false;
+coloringBool=true;
   emptysketchPad();
   n=n+10;
   numberOfCells.textContent=n;
@@ -71,6 +75,10 @@ upBtn.addEventListener('click', function(){
 
 downBtn.addEventListener('click', function(){
   if (n>10){
+    COULEUR=tempColor;
+    shading=false;
+    lighting=false;
+coloringBool=true;
   emptysketchPad();
   n=n-10;
   numberOfCells.textContent=n;
@@ -153,6 +161,7 @@ shadeBtn.addEventListener('click', function () {
   tester.textContent='shade';
 shading=true;
 lighting=false;
+coloringBool=false;
 });
 
 
@@ -160,6 +169,7 @@ lightBtn.addEventListener('click', function () {
   tester.textContent='shade';
 lighting=true;
 shading=false;
+coloringBool=false;
 });
 
 
