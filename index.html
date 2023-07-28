@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a sketch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/> <!-- 'classic' theme -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>sketchPad</h1>
+    <div class="bigContainer">
+    <div class="menu">
+    <div class="color-picker-container">
+        <button class="color">color</button>
+        <div class="color-picker"></div></div>
+    <button class="eraser">erase</button>
+    <button class="shading">darken</button>
+    <button class="lighting">lighten</button>
+    <div class="counterContainer">
+        <div class="cellNumber">0</div>
+        <div class="upDownContainer">
+            <button class="up">▲</button>
+            <button class="down">▼</button>
+        </div>
+    </div>
+    <div class="showLines">
+        <input type="checkbox" class="check" state="checked">show lines 
+</div>
+    <div class="tester"></div>
+</div>    
+    <div class="sketchPadContainer">
+    <div class="sketchPad"></div></div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+*{
+    border: 1px solid blue;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body{
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    height:100%;
+}
+
+.bigContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+h1{
+    align-self: center;
+}
+
+
+.sketchPad{
+align-self: center;
+height:40vw;
+width: 40vw;
+display:flex;
+flex-direction: row;
+border: 1px solid black;
+}
+
+.column{  
+flex:1;
+display: flex;
+flex-direction:column;
+margin:0;
+border:0px solid transparent;
+}
+
+
+.cell{
+    flex: 1;
+    margin: 0;
+    padding:0;
+    border:0px solid transparent;
+}
+
+.sketchPadContainer{
+    flex:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    flex:20%;
+display:flex;
+flex-direction: column;
+gap: 5%
+}
+
+.color-picker-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:5%;
+}
+
+.counterContainer{
+    display: flex;
+    flex-direction:row;
+    align-items: center ;
+    justify-content: center;
+}
+
+.upDownContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu button{
+    font-size: 1.8vw;
+    margin: auto;
+    padding: 1.5% 3%;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.cellNumber{
+align-self: center;
+}
+
+.upDownContainer button{
+    border-radius: 4px;
+}
