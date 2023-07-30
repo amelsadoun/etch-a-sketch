@@ -1,7 +1,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 *{
-    border: 1px solid blue;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -9,6 +8,7 @@ body{
     margin: 0%;
     display: flex;
     flex-direction: column;
+    background: linear-gradient(to bottom right, #dff7ff, #97e4d8);
 }
 
 .bigContainer{
@@ -18,17 +18,22 @@ body{
 
 h1{
     align-self: center;
+    font-size:4.5vw;
+    margin:0.5% auto;
+    margin-top: 1.5%;
+    color:#397b70
 }
 
 
 .sketchPad{
 align-self: center;
-height:40vw;
-width: 40vw;
+height:35vw;
+width: 35vw;
 display:flex;
 flex-direction: row;
-border: 1px solid black;
+border: 0.5vw solid #a6d4cc;
 overflow: hidden;
+margin: 8%;
 }
 
 .column{  
@@ -58,7 +63,12 @@ border:0px solid transparent;
     flex:20%;
 display:flex;
 flex-direction: column;
-gap: 5%
+gap: 3%;
+border: 1px solid #43a595;
+border-radius: 10px;
+margin: 5% auto;
+margin-left: 9vw;
+padding: 3% auto;
 }
 
 .color-picker-container{
@@ -66,13 +76,17 @@ gap: 5%
     justify-content: center;
     align-items: center;
     padding:5%;
+    padding-right: 20%;
 }
 
 .counterContainer{
+    font-size: 3vw;
     display: flex;
     flex-direction:row;
     align-items: center ;
     justify-content: center;
+    color: #397b70;
+    gap:3%;
 }
 
 .upDownContainer{
@@ -81,10 +95,10 @@ gap: 5%
 }
 
 .menu button{
-    font-size: 1.8vw;
+    font-size: 2vw;
     margin: auto;
     padding: 1.5% 3%;
-    border-radius: 10px;
+    border-radius: 15px;
     font-weight: 600;
 }
 
@@ -94,4 +108,126 @@ align-self: center;
 
 .upDownContainer button{
     border-radius: 4px;
+    font-size: 1.8vw;
+    background: #43a595;
+    color: white;
+    border: 0.8px solid #397b70;
 }
+
+button{
+    cursor: pointer;
+}
+
+.perm{
+    border: 1px solid #3498db;
+    background: none;
+    padding: 10px 20px;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    color:#43a595;
+    border: 0.15vw solid #43a595;
+
+}
+
+.perm::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #43a595;
+    z-index: -1;
+    transition: 0.5s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+
+  
+  .perm:hover::before{
+    height: 180%;
+  }
+
+  .perm:hover{
+    color:rgb(255, 255, 255);
+  }
+
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 1% 4%;
+    padding-left: 15%;
+    margin:auto;
+    margin-bottom: 6%;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color:#397b70;
+    font-size: 1.8vw;
+    border: 1px solid #43a595;
+    border-radius: 1vw;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    bottom:1%;
+    top:0.4vw;
+    left: 3%;
+    height: 2vw;
+    width: 2vw;
+    background-color: #eee;
+    border-radius: 0.5vw;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #397b70;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 30%;
+    top: 5%;
+    width: 0.5vw;
+    height: 1vw;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }

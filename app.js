@@ -6,16 +6,18 @@ var temp;
 var tempColor='#42445A';
 var COULEUR='#42445A';
 var backgroundColor='rgb(255,255,255)';
+
 var shading=false;
+var erasing=false;
 var coloringBool=true;
-var mouseIsDown = false;
 var lighting = false;
+
+var mouseIsDown = false;
 var cells;
 
 //selecting elements
 const sketchPad = document.querySelector('.sketchPad');
 const eraser = document.querySelector('.eraser');
-const tester = document.querySelector('.tester');
 const shadeBtn = document.querySelector('.shading');
 const lightBtn = document.querySelector('.lighting');
 const upBtn = document.querySelector('.up');
@@ -51,12 +53,28 @@ const pickr = Pickr.create({
 
 addCellsEventListeners();
 
+function keepColoredWhileClicked(element, bool){
+if (bool) {
+  element.style.background='#43a595';
+  element.style.color='white';
+}
+else{
+  element.style.background='none';
+  element.style.color='';
+}
+}
 
 pickr.on('save', (color) => {
 COULEUR=color.toRGBA().toString();
 tempColor=COULEUR;
+coloringBool=true;
 shading=false;
 lighting=false;
+erasing=false;
+keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
 });
 
 upBtn.addEventListener('click', function(){
@@ -106,7 +124,7 @@ for(var i = 0; i <number; i++) {
     cell.style.background = 'rgb(255,255,255)';
     column.appendChild(cell);
       if (checkBox.checked) {
-        cell.style.border = '0.3px solid black';
+        cell.style.border = '0.1px solid black';
       } else {
         cell.style.border ='0px solid transparent';
       }
@@ -145,40 +163,60 @@ function coloring (element){
   } else if (coloringBool){
     element.style.background=COULEUR;
   }
+   else if (erasing){
+    element.style.background=COULEUR;
+   }
 }
 
 
 
 eraser.addEventListener('click', function(){
-  tester.textContent='erase';
   COULEUR=backgroundColor;
+  erasing=true;
   shading=false;
   lighting=false;
+  coloringBool=false;
+  keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
 });
 
 
 shadeBtn.addEventListener('click', function () {
-  tester.textContent='shade';
 shading=true;
 lighting=false;
 coloringBool=false;
+erasing=false;
+keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
 });
 
 
 lightBtn.addEventListener('click', function () {
-  tester.textContent='shade';
 lighting=true;
 shading=false;
 coloringBool=false;
+erasing=false;
+keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
 });
 
 
 colorBtn.addEventListener('click', function () {
 COULEUR=tempColor;
-tester.textContent=tempColor;
 coloringBool=true;
 shading=false;
 lighting=false;
+erasing=false;
+keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
 });
 
 //this is basically the thing that colors it
@@ -215,11 +253,10 @@ cells.forEach((cell) => {
 
   checkBox.addEventListener('change', function() {
     if (this.checked) {
-      cell.style.border = '0.3px solid black';
+      cell.style.border = '0.1px solid black';
     } else {
       cell.style.border ='0px solid transparent';
     }
   });
 });
 }
-
