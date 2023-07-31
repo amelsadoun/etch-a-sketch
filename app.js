@@ -87,7 +87,12 @@ coloringBool=true;
   n=n+10;
   numberOfCells.textContent=n;
   createSketchPad(n);
+  keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
   addCellsEventListeners();
+
   }
 });
 
@@ -101,6 +106,10 @@ coloringBool=true;
   n=n-10;
   numberOfCells.textContent=n;
   createSketchPad(n);
+  keepColoredWhileClicked(shadeBtn, shading);
+keepColoredWhileClicked(lightBtn, lighting);
+keepColoredWhileClicked(colorBtn, coloringBool);
+keepColoredWhileClicked(eraser, erasing);
   addCellsEventListeners();
   }
   });
