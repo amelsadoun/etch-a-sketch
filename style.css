@@ -1,233 +1,320 @@
-  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
-*{
-    font-family: 'Quicksand', sans-serif;
+* {
+  font-family: "Quicksand", sans-serif;
 }
 
-body{
-    margin: 0%;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to bottom right, #dff7ff, #97e4d8);
+body {
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #dff7ff, #97e4d8);
 }
 
-.bigContainer{
-    display: flex;
-    flex-direction: row;
+.bigContainer {
+  display: flex;
+  flex-direction: row;
 }
 
-h1{
-    align-self: center;
-    font-size:4.5vw;
-    margin:0.5% auto;
-    margin-top: 1.5%;
-    color:#397b70
+h1 {
+  align-self: center;
+  font-size: 4.5vw;
+  margin: 0.5% auto;
+  margin-top: 1.5%;
+  color: #397b70;
 }
 
-
-.sketchPad{
-align-self: center;
-height:35vw;
-width: 35vw;
-display:flex;
-flex-direction: row;
-border: 0.5vw solid #a6d4cc;
-overflow: hidden;
-margin: 8%;
+.sketchPad {
+  align-self: center;
+  height: 35vw;
+  width: 35vw;
+  display: flex;
+  flex-direction: row;
+  border: 0.5vw solid #a6d4cc;
+  overflow: hidden;
+  margin: 8%;
 }
 
-.column{  
-flex:1;
-display: flex;
-flex-direction:column;
-margin:0;
-border:0px solid transparent;
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  border: 0px solid transparent;
 }
 
-
-.cell{
-    flex: 1;
-    margin: 0;
-    padding:0;
-    border:0px solid transparent;
+.cell {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  border: 0px solid transparent;
 }
 
-.sketchPadContainer{
-    flex:80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sketchPadContainer {
+  flex: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu{
-    flex:20%;
-display:flex;
-flex-direction: column;
-gap: 3%;
-border: 1px solid #43a595;
-border-radius: 10px;
-margin: 5% auto;
-margin-left: 9vw;
-padding: 3% auto;
+.menu {
+  flex: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  border: 1px solid #43a595;
+  border-radius: 10px;
+  margin: 5% auto;
+  margin-left: 9vw;
+  padding: 3% auto;
 }
 
-.color-picker-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding:5%;
-    padding-right: 20%;
+.color-picker-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  padding-right: 20%;
 }
 
-.counterContainer{
-    font-size: 3vw;
-    display: flex;
-    flex-direction:row;
-    align-items: center ;
-    justify-content: center;
-    color: #397b70;
-    gap:3%;
+.counterContainer {
+  font-size: 3vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #397b70;
+  gap: 3%;
 }
 
-.upDownContainer{
-    display: flex;
-    flex-direction: column;
+.upDownContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.menu button{
-    font-size: 2vw;
-    margin: auto;
-    padding: 1.5% 3%;
-    border-radius: 15px;
-    font-weight: 600;
+.menu button {
+  font-size: 2vw;
+  margin: auto;
+  padding: 1.5% 3%;
+  border-radius: 15px;
+  font-weight: 600;
 }
 
-.cellNumber{
-align-self: center;
+.cellNumber {
+  align-self: center;
 }
 
-.upDownContainer button{
-    border-radius: 4px;
-    font-size: 1.8vw;
-    background: #43a595;
-    color: white;
-    border: 0.8px solid #397b70;
+.upDownContainer button {
+  border-radius: 4px;
+  font-size: 1.8vw;
+  background: #43a595;
+  color: white;
+  border: 0.8px solid #397b70;
 }
 
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 
-.perm{
-    border: 1px solid #3498db;
-    background: none;
-    padding: 10px 20px;
-    margin: 10px;
-    transition: 0.8s;
-    position: relative;
-    overflow: hidden;
-    color:#43a595;
-    border: 0.15vw solid #43a595;
-
+.perm {
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color: #43a595;
+  border: 0.15vw solid #43a595;
 }
 
-.perm::before{
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: #43a595;
-    z-index: -1;
-    transition: 0.5s;
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
+.perm::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #43a595;
+  z-index: -1;
+  transition: 0.5s;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
 
-  
-  .perm:hover::before{
-    height: 180%;
-  }
+.perm:hover::before {
+  height: 180%;
+}
 
-  .perm:hover{
-    color:rgb(255, 255, 255);
-  }
-
-
+.perm:hover {
+  color: rgb(255, 255, 255);
+}
 
 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 1% 4%;
+  padding-left: 15%;
+  margin: auto;
+  margin-bottom: 6%;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #397b70;
+  font-size: 1.8vw;
+  border: 1px solid #43a595;
+  border-radius: 1vw;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  bottom: 1%;
+  top: 0.4vw;
+  left: 3%;
+  height: 2vw;
+  width: 2vw;
+  background-color: #eee;
+  border-radius: 0.5vw;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #397b70;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 30%;
+  top: 5%;
+  width: 0.5vw;
+  height: 1vw;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 600px) {
+
+  h1{
+    font-size: 10vw;
+  }
+  * {
+    border: 1px solid red;
+  }
+
+  .bigContainer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    position: relative;
-    padding: 1% 4%;
-    padding-left: 15%;
-    margin:auto;
-    margin-bottom: 6%;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    color:#397b70;
-    font-size: 1.8vw;
+    align-content: center;
+  }
+
+  .menu {
+    display: grid;
     border: 1px solid #43a595;
-    border-radius: 1vw;
+    border-radius: 20px;
+    margin: 3% 0%;
+    padding: 5% 2%;
+    width: 40vw;
+    row-gap: 10%;
+    column-gap: 20%;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    align-self: center;
+    justify-self: center;
+    justify-content: center;
+    grid-template-areas:
+      "color erase"
+      "number darken"
+      "lines lighten";
   }
-  
-  /* Hide the browser's default checkbox */
-  .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+
+  .color-picker-container {
+    padding: 0;
+    gap: 7%;
+    width: 15vw;
   }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    bottom:1%;
-    top:0.4vw;
-    left: 3%;
-    height: 2vw;
-    width: 2vw;
-    background-color: #eee;
-    border-radius: 0.5vw;
+
+  .container {
+    padding: 3% 3%;
+    padding-left: 20%;
+    margin: auto;
+    font-size: 2.4vw;
   }
-  
-  /* On mouse-over, add a grey background color */
-  .container:hover input ~ .checkmark {
-    background-color: #ccc;
+
+  .sketchPad {
+    align-self: center;
+    height: 70vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    border: 0.5vw solid #a6d4cc;
+    overflow: hidden;
+    margin: 2% auto;
   }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container input:checked ~ .checkmark {
-    background-color: #397b70;
+
+  .perm {
+    border: 1px solid #3498db;
+    background: none;
+    padding: 3% 6%;
+    width:9vw;
+    height: 4vw;
+    margin: 40px;
+    transition: 0.8s;
+    color: #43a595;
+    border: 0.15vw solid #43a595;
   }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+
+  .color-picker-container {
+    grid-area: color;
   }
-  
-  /* Show the checkmark when checked */
-  .container input:checked ~ .checkmark:after {
-    display: block;
+  .container {
+    grid-area: number;
   }
-  
-  /* Style the checkmark/indicator */
-  .container .checkmark:after {
-    left: 30%;
-    top: 5%;
-    width: 0.5vw;
-    height: 1vw;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  .lines {
+    grid-area: lines;
   }
+  .eraser {
+    grid-area: erase;
+  }
+  .shading {
+    grid-area: darken;
+  }
+  .lighting {
+    grid-area: lighten;
+  }
+}
