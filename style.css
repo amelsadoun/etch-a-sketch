@@ -231,9 +231,6 @@ button {
   h1{
     font-size: 10vw;
   }
-  * {
-    border: 1px solid red;
-  }
 
   .bigContainer {
     display: flex;
