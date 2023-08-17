@@ -32,7 +32,8 @@ h1 {
   flex-direction: row;
   border: 0.5vw solid #a6d4cc;
   overflow: hidden;
-  margin: 8%;
+  margin: 8% 4%;
+  margin-right: 15vw;
 }
 
 .column {
@@ -65,7 +66,7 @@ h1 {
   border: 1px solid #43a595;
   border-radius: 10px;
   margin: 5% auto;
-  margin-left: 9vw;
+  margin-left: 19vw;
   padding: 3% auto;
 }
 
@@ -93,9 +94,9 @@ h1 {
 }
 
 .menu button {
-  font-size: 2vw;
+  font-size: 1.8vw;
   margin: auto;
-  padding: 1.5% 3%;
+  padding: 2% 4%;
   border-radius: 15px;
   font-weight: 600;
 }
@@ -231,9 +232,7 @@ button {
   h1{
     font-size: 10vw;
   }
-  * {
-    border: 1px solid red;
-  }
+
 
   .bigContainer {
     display: flex;
